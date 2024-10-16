@@ -9,6 +9,7 @@ class Category extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id',
         'name',
         // tambahkan kolom lain yang ingin Anda masukkan ke dalam database di sini
     ];

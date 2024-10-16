@@ -101,3 +101,17 @@ form .text h3 a:hover{
   top: 50%;
   transform: translateY(-50%);
 }
+
+/* Tambahkan di file CSS Anda */
+.btn-confirm-blue {
+  background-color:#4070f4; /* Ubah menjadi warna biru */
+  color: white; /* Ubah warna teks */
+  border: none; /* Hilangkan border jika ada */
+  border-radius: 4px; /* Tambahkan sudut melengkung (opsional) */
+  padding: 10px 20px; /* Tambahkan padding (opsional) */
+  transition: background-color 0.3s; /* Efek transisi saat hover (opsional) */
+}
+
+.btn-confirm-blue:hover {
+  background-color: #4070f4; /* Ubah warna saat hover */
+}

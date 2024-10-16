@@ -1,0 +1,11 @@
+.card .card-image {
+    height: 200px; /* Sesuaikan dengan tinggi card */
+    overflow: hidden;
+}
+
+.card .card-image img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+

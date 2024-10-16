@@ -20,7 +20,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
-        'address', // Tambahkan atribut 'address' ke dalam $fillable
+        'address',
+        'image',
+        'telepon', // Tambahkan atribut 'address' ke dalam $fillable
     ];
 
     /**

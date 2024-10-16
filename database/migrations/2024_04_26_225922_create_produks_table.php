@@ -17,7 +17,6 @@ class CreateProduksTable extends Migration
             $table->id();
             $table->string('nama');
             $table->string('kategori');
-            $table->string('merek');
             $table->string('gambar');
             $table->timestamps();
         });

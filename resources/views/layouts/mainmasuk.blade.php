@@ -9,7 +9,7 @@
 <body>
   <div class="wrapper">
     <h2>Login</h2>
-    <form action="{{ route('login') }}" method="POST">
+    <form action="{{ route('user.login') }}" method="POST">
       @csrf <!-- Tambahkan token CSRF -->
       <div class="input-box">
         <input type="email" name="email" placeholder="Enter email Kamu" required> <!-- Tambahkan atribut name="email" -->
@@ -23,7 +23,7 @@
         <input type="Submit" value="Login">
       </div>
       <div class="text">
-        <h3>Belum Punya Akun? <a href="/daftar">Daftar sekarang</a></h3>
+        <h3>Belum Punya Akun? <a href="{{ route('user.register') }}">Daftar sekarang</a></h3>
       </div>
     </form>
   </div>

@@ -7,8 +7,8 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    // Menampilkan semua kategori
-    public function index(Request $request)
+
+    public function getCategories(Request $request)
     {
         $categories = Category::query(); // Contoh pengambilan data dari model Category
     
@@ -18,17 +18,26 @@ class CategoryController extends Controller
             $categories->where('name', 'like', '%' . $search . '%');
         }
     
-        $categories = $categories->get(); // Mengubah variabel $brands menjadi $categories
+        return Category::pluck('name')->toArray(); // Mengubah hasil pluck menjadi array asosiatif
+    }
     
+    public function navbar()
+    {
+        $categories = $this->getCategories(request());
+        return view('partials.navbar', compact('categories'));
+    }
+
+    // Menampilkan semua kategori
+    public function index()
+    {
+        $categories = Category::all(); // Mengambil semua kategori dari database
         return view('datakategori', compact('categories'));
     }
     
-    
-
     // Menampilkan form untuk membuat kategori baru
     public function create()
     {
-        return view('createkategori');
+        return view('kategori.createkategori');
     }
 
     // Menyimpan kategori baru
@@ -56,7 +65,7 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = Category::findOrFail($id);
-        return view('editkategori', compact('category'));
+        return view('kategori.editkategori', compact('category'));
     }
 
     // Menyimpan perubahan pada kategori yang sudah diedit

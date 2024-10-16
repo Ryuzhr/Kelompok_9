@@ -38,7 +38,7 @@
         <div class="input-box button">
             <input type="submit" value="Daftar">
         </div>
-        <h3>Sudah Punya Akun <a href="/masuk">Login Sekarang</a></h3>
+        <h3>Sudah Punya Akun <a href="{{route('user.login')}}">Login Sekarang</a></h3>
     </form>
 </div>
 </body>
